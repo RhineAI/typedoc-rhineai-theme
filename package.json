@@ -1,18 +1,17 @@
 {
-	"name": "typedoc-github-theme",
+	"name": "typedoc-rhineai-theme",
 	"description": "Elegant and seamless look and feel for your TypeScript documentation on GitHub Pages",
-	"version": "0.3.1",
+	"version": "0.4.0",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
-	"repository": "https://github.com/JulianWowra/typedoc-github-theme",
-	"homepage": "https://julianwowra.github.io/typedoc-github-theme/",
+	"repository": "https://github.com/RhineAI/typedoc-rhineai-theme",
+	"homepage": "https://github.com/RhineAI/typedoc-rhineai-theme",
 	"author": "Julian Wowra <development@julianwowra.de>",
 	"license": "MIT",
 	"publishConfig": {
 		"provenance": true
 	},
-	"packageManager": "pnpm@10.15.0",
 	"peerDependencies": {
 		"typedoc": "~0.28.0"
 	},
@@ -27,12 +26,10 @@
 		"typescript-eslint": "8.40.0"
 	},
 	"scripts": {
-		"build": "pnpm build:lib && pnpm build:docs",
-		"build:lib": "tsc",
-		"build:docs": "typedoc src --plugin ./dist/index.js",
-		"lint": "pnpm lint:format && pnpm lint:code",
-		"lint:code": "eslint .",
-		"lint:format": "prettier --check ."
+		"build": "tsc",
+		"test": "bun run build && typedoc src --plugin ./dist/index.js",
+		"lint": "eslint .",
+		"format": "prettier ."
 	},
 	"engines": {
 		"node": ">=18.0.0"

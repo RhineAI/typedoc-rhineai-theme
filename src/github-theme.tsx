@@ -3,9 +3,9 @@ import { dirname, resolve } from 'path';
 import type { PageEvent, Reflection, Renderer } from 'typedoc';
 import { DefaultTheme, JSX, RendererEvent } from 'typedoc';
 import { fileURLToPath } from 'url';
-import { GitHubThemeContext } from './GitHubThemeContext.js';
+import { GitHubThemeContext } from './gitHub-theme-context.js';
 
-export class GitHubTheme extends DefaultTheme {
+export class GithubTheme extends DefaultTheme {
 	constructor(renderer: Renderer) {
 		super(renderer);
 

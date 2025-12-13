@@ -1,9 +1,0 @@
-# Ignore everything by default
-*
-
-# Include specific directories and files
-!dist/**/*
-!src/assets/**/*
-!LICENSE
-!package.json
-!README.md
