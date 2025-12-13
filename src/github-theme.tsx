@@ -1,42 +1,45 @@
-import { cpSync } from 'fs';
-import { dirname, resolve } from 'path';
-import type { PageEvent, Reflection, Renderer } from 'typedoc';
-import { DefaultTheme, JSX, RendererEvent } from 'typedoc';
-import { fileURLToPath } from 'url';
-import { GitHubThemeContext } from './gitHub-theme-context.js';
+import { cpSync } from 'fs'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
+
+import { DefaultTheme, RendererEvent } from 'typedoc'
+
+import { GithubThemeContext } from './github-theme-context.js'
+
+import type { PageEvent, Reflection, Renderer } from 'typedoc'
 
 export class GithubTheme extends DefaultTheme {
-	constructor(renderer: Renderer) {
-		super(renderer);
+  constructor(renderer: Renderer) {
+    super(renderer)
 
-		// copy the complete assets
-		renderer.on(RendererEvent.END, (event) => {
-			const from = resolve(dirname(fileURLToPath(import.meta.url)), '../src/assets/');
-			const to = resolve(event.outputDirectory, 'assets/');
+    // copy the complete assets
+    renderer.on(RendererEvent.END, (event) => {
+      const from = resolve(dirname(fileURLToPath(import.meta.url)), '../src/assets/')
+      const to = resolve(event.outputDirectory, 'assets/')
 
-			cpSync(from, to, { recursive: true });
-		});
+      cpSync(from, to, { recursive: true })
+    })
 
-		// link the css file
-		renderer.hooks.on('head.end', (event) => (
-			<>
-				<link rel="stylesheet" href={event.relativeURL('assets/typedoc-github-style.css')} />
-			</>
-		));
+    // link the css file
+    renderer.hooks.on('head.end', (event) => (
+      <>
+        <link rel='stylesheet' href={event.relativeURL('assets/typedoc-github-style.css')} />
+      </>
+    ))
 
-		// set the Shiki theme
-		renderer.application.on('bootstrapEnd', () => {
-			if (!this.application.options.isSet('lightHighlightTheme')) {
-				this.application.options.setValue('lightHighlightTheme', 'github-light-default');
-			}
+    // set the Shiki theme
+    renderer.application.on('bootstrapEnd', () => {
+      if (!this.application.options.isSet('lightHighlightTheme')) {
+        this.application.options.setValue('lightHighlightTheme', 'github-light-default')
+      }
 
-			if (!this.application.options.isSet('darkHighlightTheme')) {
-				this.application.options.setValue('darkHighlightTheme', 'github-dark-default');
-			}
-		});
-	}
+      if (!this.application.options.isSet('darkHighlightTheme')) {
+        this.application.options.setValue('darkHighlightTheme', 'github-dark-default')
+      }
+    })
+  }
 
-	getRenderContext(pageEvent: PageEvent<Reflection>) {
-		return new GitHubThemeContext(this.router, this, pageEvent, this.application.options);
-	}
+  getRenderContext(pageEvent: PageEvent<Reflection>) {
+    return new GithubThemeContext(this.router, this, pageEvent, this.application.options)
+  }
 }

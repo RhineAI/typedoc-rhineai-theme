@@ -37,8 +37,11 @@
   "scripts": {
     "build": "tsc",
     "test": "bun run build && typedoc src --plugin ./dist/index.js",
-    "lint": "eslint .",
-    "format": "prettier ."
+    "type:check": "tsc --noEmit",
+    "lint": "eslint --fix .",
+    "lint:check": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "engines": {
     "node": ">=18.0.0"
