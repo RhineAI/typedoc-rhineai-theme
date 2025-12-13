@@ -2,7 +2,8 @@ import { cpSync } from 'fs'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
-import { DefaultTheme, RendererEvent } from 'typedoc'
+// eslint-disable-next-line
+import { DefaultTheme, RendererEvent, JSX } from 'typedoc'
 
 import { GithubThemeContext } from './github-theme-context.js'
 

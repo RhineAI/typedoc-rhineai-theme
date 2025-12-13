@@ -37,6 +37,7 @@ const compat = new FlatCompat({
 })
 
 const globalConfig = defineConfig([
+  // @ts-expect-error ignore type error
   includeIgnoreFile(gitignorePath),
   {
     ignores: ['bun.lock'],
