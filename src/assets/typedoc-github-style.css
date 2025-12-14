@@ -82,7 +82,7 @@
   --color-warning-border: var(--dark-color-warning-border);
 }
 
-/*
+/**
  * Define fonts
  */
 
@@ -95,7 +95,7 @@ body {
   font-family: var(--font-family-text), sans-serif;
 }
 
-/*
+/**
  * Links
  */
 
@@ -140,7 +140,7 @@ a.external[target='_blank'] {
   padding-right: 0px;
 }
 
-/*
+/**
  * Tables
  */
 
@@ -163,7 +163,7 @@ table {
   /*background-color: var(--color-background-code);*/
 }
 
-/*
+/**
  * Horizontal line
  */
 
@@ -171,7 +171,7 @@ table {
   color: var(--color-accent);
 }
 
-/*
+/**
  * Buttons
  */
 
@@ -198,7 +198,7 @@ pre > button {
   padding: 4px 8px;
 }
 
-/*
+/**
  * Checkbox
  */
 
@@ -226,7 +226,7 @@ input[type='checkbox']:checked ~ svg .tsd-checkbox-background {
   color: var(--color-text);
 }
 
-/*
+/**
  * Select
  */
 
@@ -238,7 +238,7 @@ select {
   font-family: inherit;
 }
 
-/*
+/**
  * Code blocks
  */
 
@@ -257,7 +257,7 @@ code.tsd-tag {
   border: unset;
 }
 
-/*
+/**
  * Warnings
  */
 
@@ -268,7 +268,7 @@ code.tsd-tag {
   border-radius: 6px;
 }
 
-/*
+/**
  * Topbar
  */
 
@@ -281,7 +281,16 @@ code.tsd-tag {
   color: var(--color-text);
 }
 
-/*
+#tsd-toolbar-menu-trigger {
+  transform: translateY(1px);
+}
+
+#tsd-search-trigger {
+  transform: translateY(2px);
+}
+
+
+/**
  * Search
  */
 
@@ -321,7 +330,7 @@ code.tsd-tag {
   background-color: var(--color-background-overlay);
 }
 
-/*
+/**
  * Structure
  */
 html,body {
@@ -363,7 +372,7 @@ header {
   top: var(--dim-header-height);
 }
 
-/*
+/**
  * Basic
  */
 
@@ -376,17 +385,13 @@ h1 {
   font-weight: 400;
 }
 
-#tsd-search-trigger {
-  transform: translateY(2px);
-}
-
 .tsd-toolbar-contents .title {
   font-size: 1rem;
   font-weight: 400;
 }
 
-/*
- * Side navigations
+/**
+ * Navigation
  */
 
 .site-menu {
@@ -412,7 +417,7 @@ h1 {
   background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
 }
 
-/*
+/**
  * Type definition groups
  */
 
@@ -456,23 +461,30 @@ h1 {
   border-bottom: var(--color-accent);
 }
 
-/*
- * Setting
+/**
+ * Right Bar
  */
-.settings .tsd-accordion-summary svg {
-  display: none;
-}
 
-.settings .tsd-accordion-summary h3 {
+.page-menu .tsd-accordion-summary {}
+
+.page-menu .tsd-accordion-summary h3 {
   font-size: 1rem;
   font-weight: 200;
+}
+
+/**
+ * Setting
+ */
+
+.settings .tsd-accordion-summary svg {
+  display: none;
 }
 
 .settings .settings-label {
   text-transform: none;
   display: block;
   font-weight: 400;
-  margin: 1.5rem 0 0.85rem 0;
+  margin: 0.9rem 0 0.85rem 0;
 }
 
 .settings .tsd-filter-input {
@@ -495,25 +507,20 @@ h1 {
   -moz-appearance: none;
 }
 
-/*
- * Fix collapsed margin
+/**
+ * Page Navigation
  */
 
-.tsd-accordion-summary > h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+.tsd-page-navigation > .tsd-accordion-summary svg {
+  display: none;
 }
 
-.tsd-page-navigation:not([open]) > .tsd-accordion-summary {
-  margin-bottom: 0px;
+.tsd-page-navigation > .tsd-accordion-summary h3 {
+  text-transform: none;
+  display: block;
+  font-weight: 200;
+  margin: 2.1rem 0 0.85rem 0;
+  padding: 0;
+  font-size: 0.95rem;
 }
 
-/*
- * Fix collapse arrows position
- */
-
-.tsd-accordion-summary svg {
-  transition: transform 0.1s ease-in-out;
-  margin-top: auto;
-  margin-bottom: auto;
-}
