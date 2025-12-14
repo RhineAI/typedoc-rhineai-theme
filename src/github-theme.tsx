@@ -24,7 +24,7 @@ export class GithubTheme extends DefaultTheme {
     // link the css file
     renderer.hooks.on('head.end', (event) => (
       <>
-        <link rel='stylesheet' href={event.relativeURL('assets/typedoc-github-style.css')} />
+        <link rel='stylesheet' href={event.relativeURL('assets/rhineai-style.css')} />
       </>
     ))
 
