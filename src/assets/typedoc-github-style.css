@@ -327,7 +327,7 @@ code.tsd-tag {
  */
 
 footer {
-  border-top-color: var(--color-accent);
+  display: none;
 }
 
 /*

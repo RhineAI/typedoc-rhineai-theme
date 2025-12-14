@@ -28,7 +28,7 @@ export class GithubTheme extends DefaultTheme {
       </>
     ))
 
-    // set the Shiki theme
+    // set theme
     renderer.application.on('bootstrapEnd', () => {
       if (!this.application.options.isSet('lightHighlightTheme')) {
         this.application.options.setValue('lightHighlightTheme', 'github-light-default')
