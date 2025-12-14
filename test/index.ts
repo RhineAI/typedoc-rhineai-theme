@@ -13,50 +13,50 @@ export const testVariableB = 'Text'
 export const testVariableC = 10
 
 /**
- * 一个用于演示 TSDoc 文档的测试类
+ * A test class for demonstrating TSDoc documentation
  *
  * @remarks
- * 这个类展示了各种 TSDoc 标签的使用方式，包括：
- * - 属性文档
- * - 方法文档
- * - 参数和返回值描述
- * - 示例代码
+ * This class demonstrates the usage of various TSDoc tags, including:
+ * - Property documentation
+ * - Method documentation
+ * - Parameter and return value descriptions
+ * - Example code
  *
  * @example
- * 基本用法：
+ * Basic usage:
  * ```typescript
  * const instance = new TestClass('Hello', 42)
- * console.log(instance.greet()) // 输出: Hello, World!
+ * console.log(instance.greet()) // Output: Hello, World!
  * ```
  *
  * @example
- * 使用泛型方法：
+ * Using generic methods:
  * ```typescript
  * const result = instance.transform([1, 2, 3], (x) => x * 2)
- * console.log(result) // 输出: [2, 4, 6]
+ * console.log(result) // Output: [2, 4, 6]
  * ```
  *
  * @public
  */
 export class TestClass {
   /**
-   * 类的名称标识
+   * The name identifier of the class
    * @readonly
    */
   public readonly name: string
 
   /**
-   * 内部计数器
+   * Internal counter
    * @defaultValue 0
    */
   private _count: number
 
   /**
-   * 创建一个 TestClass 实例
+   * Creates a TestClass instance
    *
-   * @param name - 实例的名称
-   * @param initialCount - 初始计数值
-   * @throws {@link Error} 如果 name 为空字符串
+   * @param name - The name of the instance
+   * @param initialCount - Initial count value
+   * @throws {@link Error} If name is an empty string
    */
   constructor(name: string, initialCount = 0) {
     if (!name) {
@@ -67,18 +67,18 @@ export class TestClass {
   }
 
   /**
-   * 获取当前计数值
-   * @returns 当前的计数器值
+   * Gets the current count value
+   * @returns The current counter value
    */
   get count(): number {
     return this._count
   }
 
   /**
-   * 返回一个问候语
+   * Returns a greeting message
    *
-   * @param target - 问候的目标，默认为 "World"
-   * @returns 格式化的问候字符串
+   * @param target - The target of the greeting, defaults to "World"
+   * @returns Formatted greeting string
    *
    * @example
    * ```typescript
@@ -91,13 +91,13 @@ export class TestClass {
   }
 
   /**
-   * 增加计数器的值
+   * Increments the counter value
    *
-   * @param amount - 增加的数量，必须为正数
-   * @returns 更新后的计数值
-   * @throws {@link RangeError} 如果 amount 不是正数
+   * @param amount - The amount to increase, must be positive
+   * @returns The updated count value
+   * @throws {@link RangeError} If amount is not positive
    *
-   * @see {@link TestClass.reset} 重置计数器
+   * @see {@link TestClass.reset} Reset the counter
    */
   public increment(amount = 1): number {
     if (amount <= 0) {
@@ -108,21 +108,21 @@ export class TestClass {
   }
 
   /**
-   * 重置计数器到初始值
-   * @param value - 重置到的值，默认为 0
+   * Resets the counter to initial value
+   * @param value - The value to reset to, defaults to 0
    */
   public reset(value = 0): void {
     this._count = value
   }
 
   /**
-   * 对数组进行转换操作
+   * Transforms an array
    *
-   * @typeParam T - 输入数组的元素类型
-   * @typeParam U - 输出数组的元素类型
-   * @param items - 要转换的数组
-   * @param transformer - 转换函数
-   * @returns 转换后的新数组
+   * @typeParam T - The element type of the input array
+   * @typeParam U - The element type of the output array
+   * @param items - The array to transform
+   * @param transformer - The transformation function
+   * @returns A new transformed array
    *
    * @example
    * ```typescript
@@ -136,9 +136,9 @@ export class TestClass {
   }
 
   /**
-   * 静态工厂方法，创建一个默认配置的实例
+   * Static factory method that creates an instance with default configuration
    *
-   * @returns 新的 TestClass 实例
+   * @returns A new TestClass instance
    */
   public static createDefault(): TestClass {
     return new TestClass('Default', 0)
@@ -146,54 +146,54 @@ export class TestClass {
 }
 
 /**
- * 用户配置选项接口
+ * User configuration options interface
  *
  * @remarks
- * 用于配置 {@link TestClass} 的行为
+ * Used to configure the behavior of {@link TestClass}
  *
  * @public
  */
 export interface TestOptions {
   /**
-   * 是否启用调试模式
+   * Whether to enable debug mode
    * @defaultValue false
    */
   debug?: boolean
 
   /**
-   * 最大重试次数
+   * Maximum number of retries
    * @defaultValue 3
    */
   maxRetries?: number
 
   /**
-   * 自定义日志处理函数
-   * @param message - 日志消息
-   * @param level - 日志级别
+   * Custom log handler function
+   * @param message - Log message
+   * @param level - Log level
    */
   logger?: (message: string, level: 'info' | 'warn' | 'error') => void
 }
 
 /**
- * 操作结果的状态枚举
+ * Status enum for operation results
  *
  * @public
  */
 export enum TestStatus {
-  /** 操作待处理 */
+  /** Operation pending */
   Pending = 'pending',
-  /** 操作进行中 */
+  /** Operation in progress */
   Running = 'running',
-  /** 操作已完成 */
+  /** Operation completed */
   Completed = 'completed',
-  /** 操作失败 */
+  /** Operation failed */
   Failed = 'failed',
 }
 
 /**
- * 表示一个异步操作的结果
+ * Represents the result of an async operation
  *
- * @typeParam T - 成功时返回的数据类型
+ * @typeParam T - The data type returned on success
  * @public
  */
 export type TestResult<T> =

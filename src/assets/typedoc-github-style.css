@@ -87,14 +87,12 @@
  */
 
 :root {
-  --font-family-text:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji';
+  --font-family-text: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-family-code: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
 body {
-  font-family: var(--font-family-text);
+  font-family: var(--font-family-text), sans-serif;
 }
 
 /*
@@ -162,7 +160,7 @@ table {
 }
 
 .tsd-typography tr:nth-child(2n) {
-  background-color: var(--color-background-code);
+  /*background-color: var(--color-background-code);*/
 }
 
 /*
@@ -319,15 +317,67 @@ code.tsd-tag {
 }
 
 #tsd-overlay {
+  backdrop-filter: blur(2px);
   background-color: var(--color-background-overlay);
 }
 
 /*
- * Baseboard
+ * Structure
+ */
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: unset;
+  scrollbar-color: unset;
+}
+
+*::-webkit-scrollbar {
+   width: 0;
+}
+
+body {
+  position: relative;
+  --dim-toolbar-contents-height: 4rem;
+  --dim-header-height: calc(4rem + 1px);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--dim-toolbar-contents-height);
+}
+
+.container-main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--dim-header-height);
+}
+
+/*
+ * Basic
  */
 
 footer {
   display: none;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+#tsd-search-trigger {
+  transform: translateY(2px);
 }
 
 /*
@@ -402,13 +452,42 @@ footer {
 }
 
 /*
- * Footer
+ * Setting
  */
+.settings .tsd-accordion-summary svg {
+  display: none;
+}
 
-footer p {
+.settings .tsd-accordion-summary h3 {
   font-size: 1rem;
-  text-align: center;
-  color: var(--color-text-aside);
+  font-weight: 200;
+}
+
+.settings .settings-label {
+  text-transform: none;
+  display: block;
+  font-weight: 400;
+  margin: 1.5rem 0 0.85rem 0;
+}
+
+.settings .tsd-filter-input {
+  font-weight: 200;
+}
+
+.settings .tsd-filter-input svg {
+  transform: translateY(1px);
+}
+
+.settings .tsd-filter-item:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
+.settings #tsd-theme {
+  padding: 8px 100px 8px 11px;
+  font-family: var(--font-family-text), sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 /*
