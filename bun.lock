@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "typedoc-github-theme",
+      "name": "typedoc-rhineai-theme",
       "devDependencies": {
         "@eslint/compat": "^1.3.2",
         "@eslint/css": "^0.10.0",

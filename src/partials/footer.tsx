@@ -1,8 +1,8 @@
 import { JSX } from 'typedoc'
 
-import type { GithubThemeContext } from '../github-theme-context.js'
+import type { RhineaiThemeContext } from '../rhineai-theme-context.js'
 
-export function footer(context: GithubThemeContext): JSX.Element {
+export function footer(context: RhineaiThemeContext): JSX.Element {
   return (
     <footer>
       {context.hook('footer.begin', context)}
