@@ -396,12 +396,26 @@ h1 {
 
 .site-menu {
   padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 0.2px;
+}
+
+.site-menu svg {
+  font-size: 1rem;
 }
 
 .tsd-navigation a {
   color: var(--color-text);
   border-radius: 6px;
-  padding: 6px;
+  padding: 9px 12px;
+}
+
+.tsd-navigation a span {
+}
+
+.tsd-small-nested-navigation {
+  margin-left: 0;
 }
 
 .tsd-navigation a,
