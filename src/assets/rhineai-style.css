@@ -524,3 +524,13 @@ h1 {
   font-size: 0.95rem;
 }
 
+/**
+ * Icon Color
+ */
+:root {
+  --color-ts-enum: #6eadff;
+  --color-ts-interface: #ff984d;
+  --color-ts-variable: #444444;
+  --color-ts-class: #6470ff;
+  --color-ts-constructor: #6470ff;
+}

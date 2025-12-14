@@ -42,7 +42,7 @@
     <g id="icon-128" class="tsd-no-select">
         <rect fill="var(--color-ts-class)" stroke-width="1.5" x="1" y="1"
               width="22" height="22" rx="12"></rect>
-        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="0.01em" dy="-0.06em" dominant-baseline="central" text-anchor="middle">C</text>
+        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="-0.02em" dy="-0.06em" dominant-baseline="central" text-anchor="middle">C</text>
     </g>
     <g id="icon-256" class="tsd-no-select">
         <rect fill="var(--color-ts-interface)" stroke-width="1.5" x="1" y="1"
@@ -52,7 +52,7 @@
     <g id="icon-512" class="tsd-no-select">
         <rect fill="var(--color-ts-constructor)" stroke-width="1.5" x="1" y="1"
               width="22" height="22" rx="12"></rect>
-        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="-0.03em" dy="-0.05em" dominant-baseline="central" text-anchor="middle">C</text>
+        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="-0.02em" dy="-0.06em" dominant-baseline="central" text-anchor="middle">C</text>
     </g>
     <g id="icon-1024" class="tsd-no-select">
         <rect fill="var(--color-ts-property)" stroke-width="0" x="1" y="1"
