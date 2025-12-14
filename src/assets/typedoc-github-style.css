@@ -380,6 +380,11 @@ h1 {
   transform: translateY(2px);
 }
 
+.tsd-toolbar-contents .title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 /*
  * Side navigations
  */

@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "bun run build && typedoc test --plugin ./dist/index.js",
+    "test": "bun run build && typedoc test --plugin ./dist/index.js --name 'Next Flow Interface'",
     "type:check": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",
