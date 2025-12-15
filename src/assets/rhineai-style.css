@@ -423,13 +423,41 @@ h1 {
 }
 
 .tsd-navigation a, .tsd-navigation summary > span, .tsd-page-navigation a {
-  padding: 0.5rem 0.7rem;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
   color: var(--color-text);
   border-radius: 0.4rem;
 }
 
+.tsd-navigation > a {
+  padding: 0.5rem 0.7rem;
+}
+
+.tsd-navigation > a,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > a,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > details.tsd-accordion > summary.tsd-accordion-summary > :is(span, a) {
+  border-radius: 0.4rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tsd-navigation > a.current {
+  background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
+}
+
+.tsd-navigation > a:hover,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > a:hover,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > details.tsd-accordion > summary.tsd-accordion-summary > :is(span:hover, a:hover) {
+  background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
+}
+
+.tsd-navigation > a:active,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > a:active,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > details.tsd-accordion > summary.tsd-accordion-summary > :is(span:active, a:active) {
+  background-color: color-mix(in srgb, var(--color-text-aside), #0000 87%);
+}
+
 .tsd-accordion-summary > a > span, .tsd-navigation summary > span > span, ul.tsd-nested-navigation > li > a > span {
-  transform: translateY(-1px);
+  /*transform: translateY(-1px);*/
 }
 
 .tsd-navigation a span {
@@ -440,7 +468,7 @@ h1 {
 }
 
 .tsd-nested-navigation {
-  margin-left: 0;
+  margin-left: 1.5rem;
 }
 
 .tsd-nested-navigation > li > details {
@@ -451,17 +479,13 @@ h1 {
   margin-left: 0;
 }
 
+.tsd-navigation > a, .tsd-navigation .tsd-accordion-summary {
+  width: 100%;
+}
+
 .tsd-navigation a,
 .tsd-navigation a:hover {
   text-decoration: none;
-}
-
-.tsd-navigation a:hover:not(.current) {
-  background-color: unset;
-}
-
-.tsd-navigation a.current {
-  background-color: unset;
 }
 
 /**
