@@ -188,6 +188,7 @@
         updateUseElements();
         addCurrentClassName();
         showSettings();
+        moveOverlay()
     }
 
     function updateUseElements() {
@@ -262,4 +263,16 @@
         }
     }
 
+    function moveOverlay() {
+        const timer = setInterval(() => {
+            const colContent = document.querySelector('.col-content');
+            const overlay = document.querySelector('.overlay');
+
+            if (colContent && overlay) {
+                colContent.appendChild(overlay);
+
+                clearInterval(timer);
+            }
+        }, 10);
+    }
 })()
