@@ -205,25 +205,33 @@
             clearInterval(timer);
             setTimeout(() => {
                 highlightCurrent(nav);
-            }, 1)
-        }, 100); // 每 100ms 检查一次
+            }, 1);
+        }, 10);
 
         function highlightCurrent(nav) {
             const currentPath = normalizePath(window.location.pathname);
+            const currentHash = normalizeHash(window.location.hash);
 
             const links = nav.querySelectorAll('a[href]');
             links.forEach(a => {
                 const href = a.getAttribute('href');
                 if (!href) return;
-                if (href.includes('#')) return;
 
                 try {
                     const url = new URL(href, window.location.href);
-                    const linkPath = normalizePath(url.pathname);
 
-                    if (linkPath === currentPath) {
-                        a.classList.add('current');
+                    const linkPath = normalizePath(url.pathname);
+                    const linkHash = normalizeHash(url.hash);
+
+                    // path 必须一致
+                    if (linkPath !== currentPath) return;
+
+                    // 只要一方有 hash，就要求双方 hash 完全一致
+                    if (linkHash || currentHash) {
+                        if (linkHash !== currentHash) return;
                     }
+
+                    a.classList.add('current');
                 } catch (e) {}
             });
         }
@@ -234,5 +242,11 @@
                 .replace(/\.html$/, '')  // 忽略 .html
                 .toLowerCase();
         }
+
+        function normalizeHash(hash) {
+            // 统一处理：'' 或 '#xxx'（不做 toLowerCase 也可以）
+            return hash || '';
+        }
     }
+
 })()
