@@ -331,7 +331,7 @@ code.tsd-tag {
   transform: translateY(-0.13em);
 }
 
-.tsd-signatures .tsd-signature {
+.tsd-signature {
   background-color: var(--color-background-secondary);
   border-radius: 6px;
   border: none;

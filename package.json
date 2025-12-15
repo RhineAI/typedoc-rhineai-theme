@@ -1,6 +1,6 @@
 {
   "name": "typedoc-rhineai-theme",
-  "description": "A GitHub-style TypeDoc theme with carefully designed and finely tuned details.",
+  "description": "A carefully designed, detail-refined GitHub-style TypeDoc theme.",
   "version": "1.0.2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
