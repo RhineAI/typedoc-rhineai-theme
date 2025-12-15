@@ -331,6 +331,21 @@ code.tsd-tag {
   transform: translateY(-0.13em);
 }
 
+.tsd-signatures .tsd-signature {
+  background-color: var(--color-background-secondary);
+  border-radius: 6px;
+  border: none;
+}
+
+pre button {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+pre:hover button {
+  opacity: 1;
+}
+
 /**
  * Warnings
  */
@@ -435,6 +450,7 @@ code.tsd-tag {
   padding: 3rem 1px 0 1px;
   box-sizing: border-box;
   grid-template-columns: minmax(10rem, 18rem) minmax(20rem, 2.5fr) minmax(10rem, 18rem);
+  scroll-padding-top: 64px;
 }
 
 .col-sidebar {
@@ -658,20 +674,6 @@ code.tsd-tag {
 
 .tsd-member-group .tsd-member:last-child {
   margin-bottom: 0px;
-}
-
-.tsd-signature {
-  border: 1px solid var(--color-accent);
-  border-radius: 6px;
-}
-
-.tsd-signatures .tsd-signature {
-  border-color: var(--color-accent);
-  border-radius: 0px;
-}
-
-.tsd-description .tsd-signatures .tsd-signature {
-  border-radius: 6px;
 }
 
 .tsd-full-hierarchy:not(:last-child) {
