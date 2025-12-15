@@ -440,7 +440,9 @@ h1 {
   transition: background-color 0.2s ease-in-out;
 }
 
-.tsd-navigation > a.current {
+.tsd-navigation > a.current,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > a.current,
+.tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > details.tsd-accordion > summary.tsd-accordion-summary > :is(span.current, a.current) {
   background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
 }
 

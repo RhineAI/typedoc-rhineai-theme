@@ -186,6 +186,7 @@
 `;
         svg.style.display = "none";
         updateUseElements();
+        addCurrentClassName();
     }
 
     function updateUseElements() {
@@ -194,5 +195,43 @@
                 el.setAttribute("href", el.getAttribute("href").replace(/.*#/, "#"));
             }
         });
+    }
+
+    function addCurrentClassName() {
+        const timer = setInterval(() => {
+            const nav = document.querySelector('.site-menu > .tsd-navigation');
+            if (!nav) return;
+
+            clearInterval(timer);
+            setTimeout(() => {
+                highlightCurrent(nav);
+            }, 1)
+        }, 100); // 每 100ms 检查一次
+
+        function highlightCurrent(nav) {
+            const currentPath = normalizePath(window.location.pathname);
+
+            const links = nav.querySelectorAll('a[href]');
+            links.forEach(a => {
+                const href = a.getAttribute('href');
+                if (!href) return;
+
+                try {
+                    const url = new URL(href, window.location.href);
+                    const linkPath = normalizePath(url.pathname);
+
+                    if (linkPath === currentPath) {
+                        a.classList.add('current');
+                    }
+                } catch (e) {}
+            });
+        }
+
+        function normalizePath(path) {
+            return path
+                .replace(/\/+$/, '')     // 去掉结尾 /
+                .replace(/\.html$/, '')  // 忽略 .html
+                .toLowerCase();
+        }
     }
 })()
