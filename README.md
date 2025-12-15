@@ -43,7 +43,7 @@
 
 <p align="center">
   <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">
-    <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" />
+    <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" style="border: 1px solid #010409" />
   </a>
 </p>
 
@@ -171,6 +171,10 @@ typedoc-rhineai-theme/
 ├── dist/                  # Compiled output
 └── package.json
 ```
+
+## Issues
+1. Due to our overly aggressive UI-aesthetics-first approach, we have hidden all scrollbars. If needed, you can fork this repository and modify the CSS.
+2. Not fully tested yet, and it is still unclear whether it works well across all projects and in all UI scenarios. If you encounter any issues, please open an issue.
 
 ## Contributing
 
