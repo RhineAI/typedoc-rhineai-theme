@@ -5,6 +5,9 @@
   "entryPoints": ["./**"],
   "out": "../docs",
   "plugin": [
-    "../dist/index.js"
+    "../dist/index.js",
+    "typedoc-plugin-rename-defaults",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-dt-links"
   ]
 }

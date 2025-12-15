@@ -41,6 +41,9 @@
     "jiti": "^2.5.1",
     "prettier": "3.6.2",
     "typedoc": "~0.28.15",
+    "typedoc-plugin-dt-links": "^2.0.33",
+    "typedoc-plugin-mdn-links": "^5.0.10",
+    "typedoc-plugin-rename-defaults": "^0.7.3",
     "typescript": "5.9.2",
     "typescript-eslint": "^8.39.1"
   },
