@@ -59,6 +59,18 @@
     --color-background-navbar: var(--light-color-background-navbar);
     --color-background-overlay: var(--light-color-background-overlay);
     --color-warning-border: var(--light-color-warning-border);
+
+    --color-ts-property: #ff984d;
+    --color-ts-interface: #ff984d;
+    --color-ts-module: #e04dff;
+    --color-ts-enum: #6eadff;
+    --color-ts-variable: #444444;
+    --color-ts-class: #6470ff;
+    --color-ts-constructor: #6470ff;
+    --color-icon-text: #ffffff;
+    --color-icon-arrow: #444444;
+    --color-icon-folder-border: #666666;
+    --color-icon-folder-fill: #cccccc;
   }
 }
 
@@ -67,6 +79,18 @@
     --color-background-navbar: var(--dark-color-background-navbar);
     --color-background-overlay: var(--dark-color-background-overlay);
     --color-warning-border: var(--dark-color-warning-border);
+
+    --color-ts-property: #ff984d;
+    --color-ts-interface: #ff984d;
+    --color-ts-module: #e358ff;
+    --color-ts-enum: #6eadff;
+    --color-ts-variable: #444444;
+    --color-ts-class: #6470ff;
+    --color-ts-constructor: #6470ff;
+    --color-icon-text: #ffffff;
+    --color-icon-arrow: #ffffff;
+    --color-icon-folder-border: #ffffff;
+    --color-icon-folder-fill: #555555;
   }
 }
 
@@ -74,24 +98,36 @@
   --color-background-navbar: var(--light-color-background-navbar);
   --color-background-overlay: var(--light-color-background-overlay);
   --color-warning-border: var(--light-color-warning-border);
+
+  --color-ts-property: #ff984d;
+  --color-ts-interface: #ff984d;
+  --color-ts-module: #e04dff;
+  --color-ts-enum: #6eadff;
+  --color-ts-variable: #444444;
+  --color-ts-class: #6470ff;
+  --color-ts-constructor: #6470ff;
+  --color-icon-text: #ffffff;
+  --color-icon-arrow: #444444;
+  --color-icon-folder-border: #666666;
+  --color-icon-folder-fill: #cccccc;
 }
 
 :root[data-theme='dark'] {
   --color-background-navbar: var(--dark-color-background-navbar);
   --color-background-overlay: var(--dark-color-background-overlay);
   --color-warning-border: var(--dark-color-warning-border);
-}
 
-/**
- * Icon Color
- */
-:root {
-  --color-ts-enum: #6eadff;
+  --color-ts-property: #ff984d;
   --color-ts-interface: #ff984d;
+  --color-ts-module: #e358ff;
+  --color-ts-enum: #6eadff;
   --color-ts-variable: #444444;
   --color-ts-class: #6470ff;
   --color-ts-constructor: #6470ff;
-  --color-icon-fill: #888888;
+  --color-icon-text: #ffffff;
+  --color-icon-arrow: #ffffff;
+  --color-icon-folder-border: #ffffff;
+  --color-icon-folder-fill: #555555;
 }
 
 /**

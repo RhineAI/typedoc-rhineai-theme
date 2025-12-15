@@ -1,4 +1,4 @@
-<h1 align="center">TypeDoc RhineAI Theme</h1>
+<h1 align="center" style="margin-top: 2rem">TypeDoc RhineAI Theme</h1>
 
 <p align="center">
   <strong>A carefully designed, detail-refined GitHub-style TypeDoc theme.</strong>
@@ -43,7 +43,7 @@
 
 <p align="center">
   <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">
-    <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" style="border: 1px solid #010409" />
+    <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" style="border: 2px solid #010409; box-sizing: border-box" />
   </a>
 </p>
 

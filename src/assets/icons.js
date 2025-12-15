@@ -130,13 +130,13 @@
         </g>
     </g>
     <g id="icon-folder" class="tsd-no-select">
-        <g stroke="var(--color-icon-text)" fill="var(--color-icon-fill)" stroke-width="1.5">
+        <g stroke="var(--color-icon-folder-border)" fill="var(--color-icon-folder-fill)" stroke-width="1.5">
             <polygon points="3,5 11,5 13,7 21,7 21,20 3,20"></polygon>
         </g>
     </g>
     <g id="icon-chevronDown" class="tsd-no-select">
         <path d="M5 10 L12 17 L19 10 L18 9 L12 15 L6 9 Z"
-              fill="var(--color-icon-text)"></path>
+              fill="var(--color-icon-arrow)"></path>
     </g>
     <g id="icon-chevronSmall" class="tsd-no-select">
         <path d="M1.5 5.50969L8 11.6609L14.5 5.50969L12.5466 3.66086L8 7.96494L3.45341 3.66086L1.5 5.50969Z"
