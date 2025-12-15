@@ -399,16 +399,37 @@ h1 {
   font-size: 0.9rem;
   font-weight: 200;
   letter-spacing: 0.2px;
+  max-width: 18rem;
 }
 
 .site-menu svg {
   font-size: 1rem;
 }
 
-.tsd-navigation a {
+.site-menu details.tsd-accordion > .tsd-accordion-summary {
+  position: relative;
+}
+
+.site-menu details.tsd-accordion > .tsd-accordion-summary > svg {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.site-menu details[open].tsd-accordion > .tsd-accordion-summary > svg {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.tsd-navigation a, .tsd-navigation summary > span, .tsd-page-navigation a {
+  padding: 0.5rem 0.7rem;
   color: var(--color-text);
-  border-radius: 6px;
-  padding: 9px 12px;
+  border-radius: 0.4rem;
+}
+
+.tsd-accordion-summary > a > span, .tsd-navigation summary > span > span, ul.tsd-nested-navigation > li > a > span {
+  transform: translateY(-1px);
 }
 
 .tsd-navigation a span {
@@ -418,17 +439,29 @@ h1 {
   margin-left: 0;
 }
 
+.tsd-nested-navigation {
+  margin-left: 0;
+}
+
+.tsd-nested-navigation > li > details {
+  margin-left: 0;
+}
+
+.tsd-small-nested-navigation > li > details {
+  margin-left: 0;
+}
+
 .tsd-navigation a,
 .tsd-navigation a:hover {
   text-decoration: none;
 }
 
 .tsd-navigation a:hover:not(.current) {
-  background-color: color-mix(in srgb, var(--color-text-aside), #0000 88%);
+  background-color: unset;
 }
 
 .tsd-navigation a.current {
-  background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
+  background-color: unset;
 }
 
 /**
@@ -476,8 +509,12 @@ h1 {
 }
 
 /**
- * Right Bar
+ * Page Menu
  */
+
+.page-menu {
+  max-width: 18rem;
+}
 
 .page-menu .tsd-accordion-summary {}
 
@@ -547,4 +584,5 @@ h1 {
   --color-ts-variable: #444444;
   --color-ts-class: #6470ff;
   --color-ts-constructor: #6470ff;
+  --color-icon-fill: #888888;
 }

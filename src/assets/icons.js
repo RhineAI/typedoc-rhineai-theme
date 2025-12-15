@@ -12,7 +12,7 @@
     <g id="icon-2" class="tsd-no-select">
         <rect fill="var(--color-ts-module)" stroke-width="1.5" x="1" y="1"
               width="22" height="22" rx="12"></rect>
-        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="0.01em" dy="-0.06em" dominant-baseline="central" text-anchor="middle">M</text>
+        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="0.01em" dy="-0.07em" dominant-baseline="central" text-anchor="middle">M</text>
     </g>
     <g id="icon-4" class="tsd-no-select">
         <rect fill="var(--color-ts-namespace)" stroke-width="1.5" x="1" y="1"
@@ -117,7 +117,7 @@
     <g id="icon-4194304" class="tsd-no-select">
         <rect fill="var(--color-ts-reference)" stroke-width="1.5" x="1" y="1"
               width="22" height="22" rx="12"></rect>
-        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="0.01em" dy="-0.06em" dominant-baseline="central" text-anchor="middle">R</text>
+        <text fill="var(--color-icon-text)" x="50%" y="50%" dx="0.01em" dy="-0.08em" dominant-baseline="central" text-anchor="middle">R</text>
     </g>
     <g id="icon-8388608" class="tsd-no-select">
         <rect fill="var(--color-icon-background)" stroke="var(--color-document)" stroke-width="1.5" x="1" y="1"
@@ -130,10 +130,8 @@
         </g>
     </g>
     <g id="icon-folder" class="tsd-no-select">
-        <rect fill="var(--color-icon-background)" stroke="var(--color-document)" stroke-width="1.5" x="1" y="1"
-              width="22" height="22" rx="6"></rect>
-        <g stroke="var(--color-icon-text)" fill="none" stroke-width="1.5">
-            <polygon points="5,5 10,5 12,8 19,8 19,18 5,18"></polygon>
+        <g stroke="var(--color-icon-text)" fill="var(--color-icon-fill)" stroke-width="1.5">
+            <polygon points="3,5 11,5 13,7 21,7 21,20 3,20"></polygon>
         </g>
     </g>
     <g id="icon-chevronDown" class="tsd-no-select">
