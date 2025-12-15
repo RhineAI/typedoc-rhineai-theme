@@ -456,18 +456,36 @@ h1 {
 }
 
 /**
- * Navigation
+ * Page Menu
  */
 
-.site-menu svg {
+.tsd-page-navigation > .tsd-accordion-summary {
+  padding: 0 0.7rem;
+}
+
+.tsd-page-navigation > .tsd-accordion-summary > h3 {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.tsd-page-navigation > .tsd-accordion-details > a {
+  padding: 0.5rem 0.7rem;
+}
+
+.tsd-page-navigation {
+  text-overflow: ellipsis;
+  color: var(--color-text);
+}
+
+.tsd-page-navigation svg {
   font-size: 1rem;
 }
 
-.site-menu details.tsd-accordion > .tsd-accordion-summary {
+.tsd-page-navigation details.tsd-accordion > .tsd-accordion-summary {
   position: relative;
 }
 
-.site-menu details.tsd-accordion > .tsd-accordion-summary > svg {
+.tsd-page-navigation details.tsd-accordion > .tsd-accordion-summary > svg {
   position: absolute;
   right: 0.6rem;
   top: 50%;
@@ -475,28 +493,65 @@ h1 {
   transition: all 0.2s ease-in-out;
 }
 
-.site-menu details[open].tsd-accordion > .tsd-accordion-summary > svg {
+.tsd-page-navigation details[open].tsd-accordion > .tsd-accordion-summary > svg {
   transform: translateY(-50%) rotate(0deg);
 }
 
-.tsd-navigation {
-  text-overflow: ellipsis;
+.tsd-accordion.tsd-page-navigation-section > div {
+  margin-left: 1.5rem;
 }
 
-.tsd-navigation a, .tsd-navigation summary > span, .tsd-page-navigation a {
+.tsd-accordion.tsd-page-navigation-section > div > a,
+.tsd-accordion.tsd-page-navigation-section > .tsd-accordion-summary {
   width: 100%;
-  padding: 0.5rem 0.6rem;
-  color: var(--color-text);
+  padding: 0.5rem 0.7rem;
   border-radius: 0.4rem;
 }
 
-.tsd-navigation > a {
-  padding: 0.5rem 0.7rem;
+.tsd-accordion.tsd-page-navigation-section > div > a:hover,
+.tsd-accordion.tsd-page-navigation-section > .tsd-accordion-summary:hover {
+  background-color: color-mix(in srgb, var(--color-text-aside), #0000 92%);
+}
+
+.tsd-accordion.tsd-page-navigation-section > div > a:active,
+.tsd-accordion.tsd-page-navigation-section > .tsd-accordion-summary:active {
+  background-color: color-mix(in srgb, var(--color-text-aside), #0000 87%);
+}
+
+/**
+ * Site Menu
+ */
+
+.tsd-navigation {
+  text-overflow: ellipsis;
+  color: var(--color-text);
+}
+
+.tsd-navigation svg {
+  font-size: 1rem;
+}
+
+.tsd-navigation details.tsd-accordion > .tsd-accordion-summary {
+  position: relative;
+}
+
+.tsd-navigation details.tsd-accordion > .tsd-accordion-summary > svg {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: all 0.2s ease-in-out;
+}
+
+.tsd-navigation details[open].tsd-accordion > .tsd-accordion-summary > svg {
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .tsd-navigation > a,
 .tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > a,
 .tsd-navigation :is(ul.tsd-small-nested-navigation, ul.tsd-nested-navigation) > li > details.tsd-accordion > summary.tsd-accordion-summary > :is(span, a) {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
   border-radius: 0.4rem;
   transition: background-color 0.2s ease-in-out;
 }
@@ -521,9 +576,6 @@ h1 {
 
 .tsd-accordion-summary > a > span, .tsd-navigation summary > span > span, ul.tsd-nested-navigation > li > a > span {
   /*transform: translateY(-1px);*/
-}
-
-.tsd-navigation a span {
 }
 
 .tsd-small-nested-navigation {
@@ -596,19 +648,12 @@ h1 {
 }
 
 /**
- * Page Menu
- */
-
-.page-menu .tsd-accordion-summary {}
-
-.page-menu .tsd-accordion-summary h3 {
-  font-size: 1rem;
-  font-weight: 200;
-}
-
-/**
  * Setting
  */
+
+.settings {
+  padding: 0 0.5rem;
+}
 
 .settings > details.tsd-accordion > summary {
   display: none;
