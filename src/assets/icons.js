@@ -135,7 +135,7 @@
         </g>
     </g>
     <g id="icon-chevronDown" class="tsd-no-select">
-        <path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z"
+        <path d="M5 10 L12 17 L19 10 L18 9 L12 15 L6 9 Z"
               fill="var(--color-icon-text)"></path>
     </g>
     <g id="icon-chevronSmall" class="tsd-no-select">
