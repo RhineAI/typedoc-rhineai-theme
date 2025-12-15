@@ -21,9 +21,9 @@
 
 <p align="center">
   <a href="#features">Features</a> •
+  <a href="#preview">Preview</a> •
   <a href="#installation">Installation</a> •
   <a href="#usage">Usage</a> •
-  <a href="#configuration">Configuration</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a>
 </p>
@@ -38,6 +38,18 @@
 - **Syntax Highlighting** - Beautiful code blocks with language-specific highlighting
 - **Zero Configuration** - Works out of the box with sensible defaults
 - **Fast & Lightweight** - Optimized for performance with minimal bundle size
+
+## Preview
+
+<p align="center">
+  <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">
+    <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">View Live Demo</a>
+</p>
 
 ## Installation
 
@@ -59,6 +71,12 @@ bun add typedoc-rhineai-theme --dev
 
 - Node.js >= 18.0.0
 - TypeDoc ~0.28
+
+## What is TypeDoc?
+
+[TypeDoc](https://typedoc.org/) is a documentation generator for TypeScript projects. It reads your TypeScript source code and JSDoc comments, then generates static HTML documentation automatically.
+
+If you're new to TypeDoc, visit [typedoc.org](https://typedoc.org/) to learn how to get started.
 
 ## Usage
 
