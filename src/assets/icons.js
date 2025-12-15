@@ -215,6 +215,7 @@
             links.forEach(a => {
                 const href = a.getAttribute('href');
                 if (!href) return;
+                if (href.includes('#')) return;
 
                 try {
                     const url = new URL(href, window.location.href);
