@@ -1,0 +1,10 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "Example Project",
+  "tsconfig": "./tsconfig.json",
+  "entryPoints": ["./**"],
+  "out": "../docs",
+  "plugin": [
+    "../dist/index.js"
+  ]
+}
