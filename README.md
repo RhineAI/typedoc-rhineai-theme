@@ -28,7 +28,6 @@
   <a href="#license">License</a>
 </p>
 
----
 
 ## Features
 
@@ -42,13 +41,13 @@
 ## Preview
 
 <p align="center">
-  <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">
+  <a href="https://typedoc.rhineai.com/example/classes/components_base_Component.Component.html">
     <img src="./example.png" alt="TypeDoc RhineAI Theme Preview" width="800" style="border: 2px solid #010409; box-sizing: border-box" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://typedoc.rhineai.com/example/classes/components_Form.FormField">View Live Demo</a>
+  <a href="https://typedoc.rhineai.com/example/classes/components_base_Component.Component.html">View Live Demo</a>
 </p>
 
 ## Installation
