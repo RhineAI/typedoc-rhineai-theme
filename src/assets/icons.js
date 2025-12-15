@@ -187,6 +187,7 @@
         svg.style.display = "none";
         updateUseElements();
         addCurrentClassName();
+        showSettings();
     }
 
     function updateUseElements() {
@@ -195,6 +196,18 @@
                 el.setAttribute("href", el.getAttribute("href").replace(/.*#/, "#"));
             }
         });
+    }
+
+    function showSettings() {
+        const timer = setInterval(() => {
+            const details = document.querySelector('.settings > details.tsd-accordion');
+            if (!details) return;
+
+            clearInterval(timer);
+            setTimeout(() => {
+                details.setAttribute('open', 'true')
+            }, 1);
+        }, 10);
     }
 
     function addCurrentClassName() {

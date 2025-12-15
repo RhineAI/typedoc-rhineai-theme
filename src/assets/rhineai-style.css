@@ -395,7 +395,7 @@ h1 {
  */
 
 .site-menu {
-  padding: 1rem 0;
+  padding: 1.5rem 0 0 0;
   font-size: 0.9rem;
   font-weight: 200;
   letter-spacing: 0.2px;
@@ -540,6 +540,7 @@ h1 {
 
 .page-menu {
   max-width: 18rem;
+  padding-left: 0.6rem;
 }
 
 .page-menu .tsd-accordion-summary {}
@@ -553,6 +554,11 @@ h1 {
  * Setting
  */
 
+.settings > details.tsd-accordion > summary {
+  display: none;
+  max-height: 0;
+}
+
 .settings .tsd-accordion-summary svg {
   display: none;
 }
@@ -560,8 +566,15 @@ h1 {
 .settings .settings-label {
   text-transform: none;
   display: block;
-  font-weight: 400;
-  margin: 0.9rem 0 0.85rem 0;
+  font-size: 0.9rem;
+  font-weight: 200;
+  margin: 1.5rem 0 0.8rem 0;
+  cursor: default;
+  user-select: none;
+}
+
+.settings .tsd-theme-toggle .settings-label {
+  margin: 3rem 0 0.8rem 0;
 }
 
 .settings .tsd-filter-input {
@@ -596,9 +609,9 @@ h1 {
   text-transform: none;
   display: block;
   font-weight: 200;
-  margin: 2.1rem 0 0.85rem 0;
+  margin: 1.9rem 0 0.8rem 0;
   padding: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /**
