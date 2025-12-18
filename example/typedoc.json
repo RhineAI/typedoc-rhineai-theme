@@ -3,7 +3,7 @@
   "name": "Example Project",
   "tsconfig": "./tsconfig.json",
   "entryPoints": ["./**"],
-  "out": "../docs",
+  "out": "../doc",
   "plugin": [
     "../dist/index.js",
     "typedoc-plugin-rename-defaults",

@@ -88,7 +88,7 @@ Add the theme to your `typedoc.json` configuration file:
   "$schema": "https://typedoc.org/schema.json",
   "name": "My Project",
   "entryPoints": ["./src"],
-  "out": "./docs",
+  "out": "./doc",
   "plugin": ["typedoc-rhineai-theme"]
 }
 ```
@@ -104,7 +104,7 @@ npx typedoc
 You can also use the theme directly from the command line:
 
 ```bash
-npx typedoc --plugin typedoc-rhineai-theme --entryPoints ./src --out ./docs
+npx typedoc --plugin typedoc-rhineai-theme --entryPoints ./src --out ./doc
 ```
 
 ### Programmatic Usage
@@ -119,7 +119,7 @@ const app = await Application.bootstrap({
 
 const project = await app.convert();
 if (project) {
-  await app.generateDocs(project, './docs');
+  await app.generateDocs(project, './doc');
 }
 ```
 
@@ -166,7 +166,7 @@ typedoc-rhineai-theme/
 │   ├── index.tsx          # Plugin entry point
 │   └── rhineai-theme.tsx  # Theme class definition
 ├── example/               # Example project for testing
-├── docs/                  # Generated documentation output
+├── doc/                   # Generated documentation output
 ├── dist/                  # Compiled output
 └── package.json
 ```

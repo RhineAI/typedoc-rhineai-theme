@@ -15,12 +15,12 @@ export class RhineaiTheme extends DefaultTheme {
 
     // copy the complete assets
     renderer.on(RendererEvent.END, (event) => {
-      const from = resolve(dirname(fileURLToPath(import.meta.url)), '../src/assets/')
+      const from = resolve(dirname(fileURLToPath(import.meta.url)), '../assets/')
       const to = resolve(event.outputDirectory, './assets/')
 
       cpSync(from, to, { recursive: true })
 
-      const publicFrom = resolve(dirname(fileURLToPath(import.meta.url)), '../src/public/')
+      const publicFrom = resolve(dirname(fileURLToPath(import.meta.url)), '../public/')
       const publicTo = resolve(event.outputDirectory, './')
 
       cpSync(publicFrom, publicTo, { recursive: true })

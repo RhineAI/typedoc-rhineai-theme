@@ -1,7 +1,7 @@
 {
   "name": "typedoc-rhineai-theme",
   "description": "A carefully designed, detail-refined GitHub-style TypeDoc theme.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "example": "bun run build && cd example && typedoc && cd ../docs && bunx serve",
+    "example": "bun run build && cd example && typedoc && cd ../doc && bunx serve",
     "type:check": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:check": "eslint .",
@@ -19,7 +19,9 @@
     "format:check": "prettier --check ."
   },
   "files": [
-    "dist"
+    "dist",
+    "assets",
+    "public"
   ],
   "peerDependencies": {
     "typedoc": "~0.28.15"
